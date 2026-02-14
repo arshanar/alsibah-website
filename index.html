@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alsibah Technicals - Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav">
+            <div class="brand">
+                <div class="logo"><img src="images/logo.png" class="reslogo"></div>
+            </div>
+            
+            <!--Hamburger-->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="menu" id ="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    
+     <div class="slider-box">
+              <img src="images/img1.jpg" class="slide active">
+              <img src="images/img2.jpg" class="slide">
+              <img src="images/img3.jpg" class="slide">
+              <img src="images/img4.jpg" class="slide">
+              <img src="images/img5.jfif" class="slide">
+              <img src="images/img6.jpg" class="slide">
+        </div>
+
+    <section class="hero">      
+        <div class="container hero-content">
+            <h1>Professional HVAC & MEP Technical Solutions</h1>
+            <p>
+                We provide reliable, efficient, and compliant engineering services
+                for residential, commercial, and industrial projects.
+            </p><br/>
+            <a href="contact.html" class="btn-primary">Request a Quote</a>
+        </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Core Services</h2>
+
+            <div class="service-grid">
+                <div class="card">
+                    <h3>HVAC Contracts</h3>
+                    <p>Complete AC installation, ducting, VRF/VRV and maintenance services.Industrial , Commercial & Residential</p>
+                </div>
+
+                <div class="card">
+                    <h3>MEP Contracting</h3>
+                    <p>Integrated mechanical, electrical, and plumbing works.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Maintenance Contracts</h3>
+                    <p>Annual preventive and corrective maintenance for all systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-1fb2d9e5-f2a1-4835-aed6-17422f432d67" data-elfsight-app-lazy></div>
+
+    <footer>
+    <div class="container footer-grid">
+      <div>
+        <div style="font-weight:900">Alsibah Technical Services</div>
+        <div class="muted-small" style="color:white; margin-top:8px">Delivering reliable HVAC and MEP solutions with a focus on efficiency and safety.</div>
+        <div class="social">
+          <a href="https://wa.me/971547141805" target="_blank" title="Chat with Shameer (Technical Manager)"><img src="images/whatsapp.jfif" alt="Whatsapp" style="width:40px; height:40px;"></a>
+          <a href="https://www.instagram.com/alsibahtechnicals" target="_blank" title="Visit Our Page"><img src="images/Instagram.png"alt="Instagram" style="width:40px; height:40px; margin-left:10px;"></a>
+          <a href="https://www.facebook.com/share/17g8Hm2Y7g/" target="_blank" title="Visit Us in Facebook"><img src="images/facebook.png"alt="Facebook" style="width:40px; height:40px; margin-left:10px;"></a>
+          <a href="https://www.linkedin.com/in/alsibahtechnicals?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="Take a look at our Profile"><img src="images/linkedin.webp"alt="linkedin" style="width:40px; height:40px; margin-left:10px;"></a>
+        </div>
+      </div>
+     </div>
+    <div style="max-width:var(--maxw);margin:20px auto 0;padding:0 28px;color:#9fd6e9;font-size:13px">© <span id="year"></span> Alsibah Technical Services. All rights reserved.</div>  
+    </footer>
+
+    <script>
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+    const slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    setInterval(() => {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }, 2500); // changes every 2.5 seconds
+
+    function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+    }
+
+    </script>
+
+
+</body>
+</html>

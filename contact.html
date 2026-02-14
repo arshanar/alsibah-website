@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alsibah Technicals - Contact Us</title>
+    <link rel="stylesheet" href="contact_styles.css" />
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav">
+            <div class="brand">
+                <div class="logo"><img src="images/logo.png" class="reslogo"></div>
+            </div>
+
+             <!--Hamburger-->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="menu" id ="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+  <section class="two-column-section">
+  <div class="column left">
+    <img src="images/contactus.jpg" alt="Contact illustration" class="slider-box">
+  </div>
+  <div class="column right">
+      <div style="display:grid;gap:10px">
+          <div class="card">
+            <div style="font-weight:800">Contact Info</div>
+            <div class="muted-small">Phone: 0547141805 | 0508463459</div>
+            <div class="muted-small">Email: <a href="mailto:alsibahtechnical@gmail.com">alsibahtechnical@gmail.com</a> / <a href="mailto:info@alsibah.com">info@alsibah.com</a></div>
+            <div class="muted-small">Office: Al Suaidi Building - 218, Al Mararr, Dubai, UAE</div>
+          </div>
+
+          <div class="card">
+            <div style="font-weight:800">Working Hours</div>
+            <div class="muted-small">Mon – Sat: 8:00 AM – 6:00 PM</div>
+            <div class="muted-small">Emergency support: 24/7</div>
+          </div>
+
+          <div class="card">
+            <div style="font-weight:800">Safety & Quality</div>
+            <div>Trained teams, documented procedures and full commissioning records for every project.</div>
+          </div>
+        </div>
+  </div>
+
+</section>
+
+
+   
+    
+     <section id="contact" class="scroll">
+      <h2>Contact & Get a Quote</h2>
+        <div>
+          <p class="muted">Complete the form below or reach us directly. We'll provide a tailored proposal for your project.</p><br>
+
+          <form id="contact-form" class="contact-form" method="POST">
+            <input type="text" id="name" name="name" placeholder="Full name" required>
+            <input type="text" id="company" name="company" placeholder="Company / Organization">
+            <input type="email" id="email" name="email" placeholder="Email address" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone number">
+            <textarea id="message" name="message" placeholder="Project details (scope, location, timeline)" required></textarea>
+            <button type="submit">Request Quote</button>
+           <!-- <div id="formMsg" class="muted-small" style="margin-top:8px"></div>  -->
+          </form>
+      </div>
+    </section>
+
+
+
+     <footer>
+    <div class="container footer-grid">
+      <div>
+        <div style="font-weight:900">Alsibah Technical Services</div>
+        <div class="muted-small" style="color:white; margin-top:8px">Delivering reliable HVAC and MEP solutions with a focus on efficiency and safety.</div>
+        <div class="social">
+          <a href="https://wa.me/971547141805" target="_blank" title="Chat with Shameer (Technical Manager)"><img src="images/whatsapp.jfif" alt="Whatsapp" style="width:40px; height:40px;"></a>
+          <a href="https://www.instagram.com/alsibahtechnicals" target="_blank" title="Visit Our Page"><img src="images/Instagram.png"alt="Instagram" style="width:40px; height:40px; margin-left:10px;"></a>
+          <a href="https://www.facebook.com/share/17g8Hm2Y7g/" target="_blank" title="Visit Us in Facebook"><img src="images/facebook.png"alt="Facebook" style="width:40px; height:40px; margin-left:10px;"></a>
+          <a href="https://www.linkedin.com/in/alsibahtechnicals?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="Take a look at our Profile"><img src="images/linkedin.webp"alt="linkedin" style="width:40px; height:40px; margin-left:10px;"></a>
+        </div>
+      </div>
+
+    </div>
+    <div style="max-width:var(--maxw);margin:20px auto 0;padding:0 28px;color:#9fd6e9;font-size:13px">© <span id="year"></span> Alsibah Technical Services. All rights reserved.</div>
+    </footer>
+
+ <script>
+
+    
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let formData = new FormData(this);
+    let popup = document.getElementById("popup");
+    let messageEl = document.getElementById("popupMessage");
+    let okButton = document.getElementById("okButton");
+
+    // ⏳ Show "Sending..." instantly
+    messageEl.innerText = "Sending your message, please wait...";
+    okButton.style.display = "none";
+    popup.style.display = "flex";
+
+    fetch("mail.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            messageEl.innerText = "Your message has been sent successfully!";
+        } else {
+            messageEl.innerText = data.message || "Something went wrong. Try again.";
+        }
+
+        okButton.style.display = "block";
+        okButton.onclick = function() {
+            popup.style.display = "none";
+            location.reload();
+        };
+    })
+    .catch(err => {
+        messageEl.innerText = "Network error: " + err;
+        okButton.style.display = "block";
+
+        okButton.onclick = function() {
+            popup.style.display = "none";
+            location.reload();
+        };
+      });
+    });
+    function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+    }
+  </script>
+  <!-- POPUP -->
+<div id="popup">
+  <div id="popupContent">
+    <p id="popupMessage">
+      Sending your message...
+    </p>
+    
+    <button id="okButton">
+      OK
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

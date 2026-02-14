@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alsibah Technicals - Our Services</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav">
+            <div class="brand">
+                <div class="logo"><img src="images/logo.png" class="reslogo"></div>
+            </div>
+
+             <!--Hamburger-->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="menu" id ="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section id="services" class="services" style="max-width: 1000px;">
+    
+    <div class="backimg">
+    <div class="servicesimg">
+    <h1 style="color: antiquewhite;">OUR CORE SERVICES</h1><br>
+    <p><h2><strong>UAE & GCC Market Compliant Solutions For HVAC & MEP Works</strong></h2></p>
+    <p><h3 style="text-align: justify;">
+        End-to-end MEP services delivered in compliance with UAE authority regulations, 
+        international standards, and project specifications for residential, commercial, 
+        and industrial developments.</h3></p><br>
+    <p><h4 style="text-align: justify;">We provide integrated Mechanical, Electrical, and Plumbing (MEP) solutions from 
+      installation through testing, commissioning, and handover. Our multidisciplinary teams 
+      ensure seamless coordination between systems, authority compliance, and long-term 
+      operational reliability.</h4></p>
+    </div>
+    </div>
+    
+
+
+
+      <div class="grid" style="margin-top:50px">
+
+      <a href="hvac.html" class="plain-link">
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">❄️</div>
+            <div>
+              <div style="font-weight:800">HVAC Systems</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="electrical.html" class="plain-link">
+      <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">⚡</div>
+            <div>
+              <div style="font-weight:800">Electrical Works</div>
+            </div>
+          </div>
+        </div>
+        </a> 
+
+        <a href="plumbing.html" class="plain-link">
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🚰</div>
+            <div>
+              <div style="font-weight:800">Plumbing & Drainage</div>
+            </div>
+          </div>
+        </div>
+        </a>
+
+        <a href="fire.html" class="plain-link">
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🔥</div>
+            <div>
+              <div style="font-weight:800">Fire Fighting Systems</div>
+            </div>
+          </div>
+        </div>
+        </a>
+
+        <a href="mechanical.html" class="plain-link">
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🧭</div>
+            <div>
+              <div style="font-weight:800">Mechanical Works</div>
+            </div>
+          </div>
+        </div>
+        </a>
+
+        <a href="maintenance.html" class="plain-link">
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">🛠️</div>
+            <div>
+              <div style="font-weight:800">Maintenance Services</div>
+            </div>
+          </div>
+        </div>
+        </a>
+        
+      </div>
+    </section>
+
+
+
+
+     <footer>
+    <div class="container footer-grid">
+      <div>
+        <div style="font-weight:900">Alsibah Technical Services</div>
+        <div class="muted-small" style="color:white; margin-top:8px">Delivering reliable HVAC and MEP solutions with a focus on efficiency and safety.</div>
+        <div class="social">
+          <a href="https://wa.me/971547141805" target="_blank" title="Chat with Shameer (Technical Manager)"><img src="images/whatsapp.jfif" alt="Whatsapp" style="width:40px; height:40px;"></a>
+          <a href="https://www.instagram.com/alsibahtechnicals" target="_blank" title="Visit Our Page"><img src="images/Instagram.png"alt="Instagram" style="width:40px; height:40px; margin-left:10px;"></a>
+          <a href="https://www.facebook.com/share/17g8Hm2Y7g/" target="_blank" title="Visit Us in Facebook"><img src="images/facebook.png"alt="Facebook" style="width:40px; height:40px; margin-left:10px;"></a>
+          <a href="https://www.linkedin.com/in/alsibahtechnicals?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="Take a look at our Profile"><img src="images/linkedin.webp"alt="linkedin" style="width:40px; height:40px; margin-left:10px;"></a>
+        </div>
+      </div>
+
+    </div>
+    <div style="max-width:var(--maxw);margin:20px auto 0;padding:0 28px;color:#9fd6e9;font-size:13px">© <span id="year"></span> Alsibah Technical Services. All rights reserved.</div>
+    </footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>

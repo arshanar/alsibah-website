@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alsibah Technicals - Who We Are</title>
+    <link rel="stylesheet" href="abt_styles.css" />
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav">
+            <div class="brand">
+                <div class="logo"><img src="images/logo.png" class="reslogo"></div>
+            </div>
+
+             <!--Hamburger-->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="menu" id ="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+       <h1 style="text-align: center;">AlSibah At A Glance</h1><br/><br>
+
+
+    <section class="grid-2x3">
+
+    <div class="grid-item"><p><h2>We are a professional technical services provider specializing 
+                    in HVAC and MEP solutions for residential, commercial, and 
+                    industrial sectors. Our company is committed to delivering 
+                    high-quality engineering services with a strong focus on 
+                    safety, reliability, and customer satisfaction.</h2></p></div>
+    <div class="grid-item"><img src="images/professional.png" class="slider-box"></div>
+
+    <div class="grid-item"><img src="images/skill.png" class="slider-box"></div>
+    <div class="grid-item"> <p><h2>With a dedicated team of skilled technicians and engineers, we 
+                    offer complete project support—from design and installation to 
+                    testing, commissioning, and maintenance. Our approach combines 
+                    technical expertise with practical field experience, ensuring 
+                    each project is executed with precision and efficiency.</h2></p></div>
+
+    <div class="grid-item"><p><h2>We take pride in offering cost-effective, durable, and 
+                    innovative solutions that meet the evolving needs of our 
+                    clients. Our success is built on professionalism, timely 
+                    execution, and a consistent commitment to quality 
+                    workmanship.</h2></p></div>
+    <div class="grid-item"><img src="images/cost.jfif" class="slider-box"></div>
+    </section>
+
+    
+
+     <footer>
+    <div class="container footer-grid">
+      <div>
+        <div style="font-weight:900">Alsibah Technical Services</div>
+        <div class="muted-small" style="color:white; margin-top:8px">Delivering reliable HVAC and MEP solutions with a focus on efficiency and safety.</div>
+        <div class="social">
+          <a href="https://wa.me/971547141805" target="_blank" title="Chat with Shameer (Technical Manager)"><img src="images/whatsapp.jfif" alt="Whatsapp" style="width:40px; height:40px;"></a>
+          <a href="https://www.instagram.com/alsibahtechnicals" target="_blank" title="Visit Our Page"><img src="images/Instagram.png"alt="Instagram" style="width:40px; height:40px; margin-left:10px;"></a>
+          <a href="https://www.facebook.com/share/17g8Hm2Y7g/" target="_blank" title="Visit Us in Facebook"><img src="images/facebook.png"alt="Facebook" style="width:40px; height:40px; margin-left:10px;"></a>
+          <a href="https://www.linkedin.com/in/alsibahtechnicals?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="Take a look at our Profile"><img src="images/linkedin.webp"alt="linkedin" style="width:40px; height:40px; margin-left:10px;"></a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:var(--maxw);margin:20px auto 0;padding:0 28px;color:#9fd6e9;font-size:13px">© <span id="year"></span> Alsibah Technical Services. All rights reserved.</div>
+    </footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+    }
+</script>
+
+
+</body>
+</html>
